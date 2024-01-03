@@ -1,0 +1,33 @@
+<section name="currency calculator">
+  <input
+    type="number"
+    placeholder="0.0"
+    step="0.01"
+    min="0"
+    name="input1"
+    [(ngModel)]="input1"
+  />
+
+  <select id="firstSelect" [(ngModel)]="select1">
+    <option>UAH</option>
+    <option name="currencyList" *ngFor="let cur of currencyCCList">
+      {{ cur }}
+    </option>
+  </select>
+  <!----->
+  =
+  <!----->
+  <input
+    type="number"
+    placeholder="0.0"
+    step="0.01"
+    min="0"
+    id="secondInput"
+    name="input2"
+    [(ngModel)]="input2"
+  />
+  <select id="secondSelect" [(ngModel)]="select2">
+    <option>UAH</option>
+    <option *ngFor="let cur of currencyCCList">{{ cur }}</option>
+  </select>
+</section>

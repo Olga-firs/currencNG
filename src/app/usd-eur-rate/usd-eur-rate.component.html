@@ -1,0 +1,6 @@
+<header>
+  <p *ngFor="let cur of usdEurList">
+    На {{ cur?.exchangedate }} за курсом НБУ <b>1</b> {{ cur?.txt }} коштує
+    <b>{{ cur?.rate }}</b> UAH
+  </p>
+</header>
