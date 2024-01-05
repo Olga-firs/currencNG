@@ -12,7 +12,7 @@ export class CurrenciesService {
   periodOfRefresh: number = 3600000; //ms
   
   async getAllCurrencies(): Promise<Currency[]> {
-    if (this.currencyList.length != 0 && this.timeOfLastFetch + this.periodOfRefresh < Date.now()  )
+    if (this.currencyList.length != 0 && this.timeOfLastFetch + this.periodOfRefresh > Date.now()  )
       return this.currencyList; 
 
     this.timeOfLastFetch = Date.now();
